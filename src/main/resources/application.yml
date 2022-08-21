@@ -1,0 +1,17 @@
+server:
+  port: 9081
+spring:
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: default
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:mydb;DATABASE_EVENT_LISTENER='ru.vk.competition.minbenchmark.db_listener.MyDatabaseEventListener'
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
